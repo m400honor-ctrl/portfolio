@@ -714,16 +714,6 @@
   @media (max-width: 860px) { .pre-ladder, .gapline, .angles-list { grid-template-columns: 1fr; } .angles { grid-template-columns: 1fr; } }
   /* formula step tags inside the captions, and the visible why-this-formula note */
   .ph-cap .st { display: inline-block; font-style: normal; font-family: "Plus Jakarta Sans", sans-serif; font-size: 8.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--yellow); background: rgba(255,199,44,.14); border-radius: 4px; padding: 1px 5px; margin-left: 6px; vertical-align: middle; direction: ltr; line-height: 1.5; }
-  /* ads continued: three cards + the variations table */
-  .cs-ads2 .ads { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  @media (max-width: 860px) { .cs-ads2 .ads { grid-template-columns: 1fr; } }
-  .vtab { display: grid; gap: 8px; }
-  .vtab > .label { color: var(--ink); }
-  .vtab table { width: 100%; border-collapse: collapse; font-size: 12px; line-height: 1.35; }
-  .vtab th, .vtab td { text-align: left; padding: 6px 10px; border-top: 1px solid rgba(21,21,26,.14); vertical-align: top; color: var(--ink-soft); }
-  .vtab thead th { color: var(--ink); font-family: "Plus Jakarta Sans", sans-serif; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; border-top: 0; padding-top: 0; }
-  .vtab tbody th { color: var(--ink); font-weight: 800; white-space: nowrap; }
-  .vtab .vnote { font-size: 12px; line-height: 1.45; color: var(--ink-soft); }
   /* results: measurement frame */
   .mframe { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
   .mframe div { display: grid; gap: 3px; padding: 12px 16px; border-radius: 14px; border: 1px solid var(--black-3); background: var(--black-2); }
@@ -944,6 +934,7 @@
     .cs-ads .ads { gap: 8px; }
     .cs-ads .phone { grid-template-columns: 156px minmax(0, 1fr); padding: 8px; gap: 4px 10px; }
     .cs-ads .ph-media { padding: 12px; }
+    .cs-ads .ph-media.has-img { padding: 0; }
     .cs-ads .ph-media span { font-size: 13px; line-height: 1.35; }
     .cs-ads .ph-cap { gap: 3px; }
     .cs-ads .ph-cap p { font-size: 12px; line-height: 1.4; }
@@ -951,10 +942,6 @@
     .cs-ads .ph-btn { padding: 4px 10px; font-size: 11.5px; }
     .cs-ads .ph-top .av { width: 24px; height: 24px; font-size: 12px; }
     .cs-ads .ph-top { grid-template-columns: 24px minmax(0, 1fr) auto; }
-    .cs-ads2 .phone { grid-template-columns: 120px minmax(0, 1fr); padding: 7px; gap: 3px 8px; }
-    .cs-ads2 .ph-media span { font-size: 11.5px; }
-    .cs-ads2 .ph-cap p { font-size: 11px; line-height: 1.36; }
-    .cs-ads2 .ph-cap .hook { font-size: 11.5px; }
     .cs-think .stage { padding-top: 56px; padding-bottom: 28px; }
     .cs-think .ladder li { padding: 16px 20px; }
     .cs-think .lbig { font-size: 19px; }
@@ -1612,7 +1599,7 @@
           <p class="label eyebrow">Second deliverable · Ad &amp; funnel copy</p>
           <h2 class="ruled">Same insight, <span class="thin">seven ways in.</span></h2>
         </div>
-        <p class="muted cs-lede">Seven short-form ads for the same problem-aware reader, shown as they'd appear in the feed. Each one opens on a saved thing that never got opened, and closes on the install. Four here; three more, and what changes between them, on the next slide.</p>
+        <p class="muted cs-lede">Seven short-form ads for the same problem-aware reader, shown as they'd appear in the feed. Each one opens on a saved thing that never got opened, and closes on the install. Four here, three more on the next slide.</p>
       </div>
 
       <div class="ads">
@@ -1653,9 +1640,9 @@
       <div class="cs-head row">
         <div>
           <p class="label eyebrow">Second deliverable · Ad &amp; funnel copy, cont.</p>
-          <h2 class="ruled">Three more, <span class="thin">and what changes between them.</span></h2>
+          <h2 class="ruled">Same insight, <span class="thin">three more ways in.</span></h2>
         </div>
-        <p class="muted cs-lede">The mechanism-led one, the objection-led one, and the blame-led one. Then all seven side by side: what each one changes, so the variation sits in the persuasion, not in the wording.</p>
+        <p class="muted cs-lede">The mechanism-led one, the objection-led one, and the blame-led one. Same reader, same insight, a different way in each time.</p>
       </div>
       <div class="ads">
         <article class="phone">
@@ -1676,22 +1663,6 @@
           <div class="ph-cap" dir="rtl"><p class="hook">كل مرة تنسى فيها لينك محتاج ترجع له، أنت السبب!</p><p>لأنك بتحفظ في أماكن مش مخصصة إنها ترجعك للي حفظته، وبتعتمد على تشتتك. فكرت كام مرة دخلت تدور على حاجة في فيسبوك، وبعد ساعتين افتكرت إنك كنت داخل تعمل حاجة معينة؟</p><p>بعدين بيفكرك بكل لينك حفظته في وقته: شير اللينك، اختار الوقت، دوس تذكير.</p><p class="cta">حمّل الأبلكيشن دلوقتي.</p></div>
           <div class="ph-btn"><span>Install</span><span class="arr" aria-hidden="true"></span></div>
         </article>
-      </div>
-      <div class="vtab">
-        <p class="label">What changes between them</p>
-        <table>
-          <thead><tr><th>Ad</th><th>Entry point</th><th>Objection it meets</th><th>Proof</th><th>Ask</th></tr></thead>
-          <tbody>
-            <tr><th>AIDA · 02</th><td>A video saved "for the weekend"</td><td>Platforms never remind you</td><td>A reminder per link, at your time</td><td>Install, start with the first postponed link</td></tr>
-            <tr><th>BAB</th><td>Hunting one link among a thousand</td><td>"Where did I save it?"</td><td>Search across everything saved (outside the core angle)</td><td>Install from the first comment</td></tr>
-            <tr><th>4Ps</th><td>The goals behind the saves: English, freelance, fitness</td><td>None named; dream-led</td><td>Share, pick a time, tap remind</td><td>Install, start with the first postponed link</td></tr>
-            <tr><th>PAS</th><td>A course stuck in Watch Later, a job you can see today</td><td>"I’ll do it later"</td><td>Playlist link, daily reminders</td><td>Install now</td></tr>
-            <tr><th>ACCA</th><td>A motion course saved three months ago</td><td>"I forgot it exists"</td><td>Share a whole playlist, daily reminder</td><td>Install now</td></tr>
-            <tr><th>Hook · Story</th><td>Saving in WhatsApp</td><td>"I already save in WhatsApp", the main one</td><td>Saved with title and picture, rings at your time</td><td>Try it now</td></tr>
-            <tr><th>AIDA</th><td>"You’re the reason": the blame</td><td>Saving where nothing brings you back</td><td>Share, pick a time, tap remind</td><td>Install now</td></tr>
-          </tbody>
-        </table>
-        <p class="vnote">Same reader, same insight. Each ad changes at least one of the four. BAB is the exception: it changes the angle itself (finding instead of returning), so it runs as a test against the core angle, not as the lead.</p>
       </div>
     </div>
     </div>
