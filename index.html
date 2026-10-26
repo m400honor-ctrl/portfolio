@@ -688,6 +688,15 @@
   .cs-ads .ph-top { grid-template-columns: 24px minmax(0, 1fr) auto; }
   .cs-ads .ads { gap: 6px; }
   .cs-ads .stage { padding-top: 56px; padding-bottom: 28px; }
+  /* 4Ps: wide card under the first two, caption in two text columns */
+  .cs-ads .phone.fourps { grid-column: 1 / -1; grid-template-columns: 150px minmax(0, 1fr) auto; grid-template-rows: auto 1fr; }
+  .cs-ads .phone.fourps .ph-media { grid-row: 1 / span 2; }
+  .cs-ads .phone.fourps .ph-top { grid-column: 2; grid-row: 1; }
+  .cs-ads .phone.fourps .ph-btn { grid-column: 3; grid-row: 1; align-self: center; min-width: 150px; }
+  .cs-ads .phone.fourps .ph-cap { grid-column: 2 / span 2; grid-row: 2; display: block; column-count: 2; column-gap: 18px; }
+  .cs-ads .phone.fourps .ph-cap p { margin: 0 0 3px; break-inside: avoid; }
+  @media (max-width: 860px) { .cs-ads .phone.fourps { grid-column: auto; grid-template-columns: 150px minmax(0, 1fr); } .cs-ads .phone.fourps .ph-cap { column-count: 1; grid-column: 2; } .cs-ads .phone.fourps .ph-btn { grid-column: 2; grid-row: 3; } }
+  .cs-ads .stage { padding-top: 56px; padding-bottom: 22px; }
   .cs-ads .phone.bab .ph-media.has-img { background: #1a1612; }
   .cs-ads .phone.bab .ph-media.has-img img { object-fit: cover; object-position: center; }
 
@@ -846,7 +855,7 @@
     .stage .meta { opacity: 0; transition: opacity .5s ease .15s; }
     .slide.in .stage .meta { opacity: 1; }
     @media (prefers-reduced-motion: reduce) { .stage > .frame, .stage .meta { opacity: 1; transform: none; transition: none; } }
-    .cs-ads .stage { padding-top: 56px; padding-bottom: 28px; }
+    .cs-ads .stage { padding-top: 56px; padding-bottom: 22px; }
     /* viewport-relative sizes measured against the stage instead of the window */
     /* ================= slide frame ================= */
   .slide { position: relative; min-height: 100cqh; scroll-snap-align: start; display: grid; align-items: center; padding: clamp(72px, 9cqh, 110px) 0; isolation: isolate; }
@@ -895,6 +904,12 @@
     .toc-list .tt { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 700; font-size: clamp(18px, 1.6cqw, 22px); letter-spacing: -0.015em; }
     .contact h2 { font-size: clamp(40px, 6.2cqw, 92px); margin-bottom: 26px; max-width: 16ch; }
     .contact .lead { font-size: clamp(18px, 1.5cqw, 22px); max-width: 44ch; font-weight: 500; margin-bottom: 38px; }
+  }
+  /* seven ads: head overrides (after the presentation-mode block so they win) */
+  @media (min-width: 900px) and (min-height: 500px) {
+    .cs-ads .cs-head.row h2 { font-size: 36px; }
+    .cs-ads .cs-head.row .cs-lede { font-size: 13.5px; line-height: 1.4; }
+    .cs-ads .frame { gap: 6px; }
   }
 </style>
 
@@ -1525,9 +1540,9 @@
       <div class="cs-head row">
         <div>
           <p class="label eyebrow">Second deliverable · Ad &amp; funnel copy</p>
-          <h2 class="ruled">Same insight, <span class="thin">six ways in.</span></h2>
+          <h2 class="ruled">Same insight, <span class="thin">seven ways in.</span></h2>
         </div>
-        <p class="muted cs-lede">Six short-form ads for the same problem-aware reader, shown as they'd appear in the feed. Each one opens on a saved thing that never got opened, and closes on the install.</p>
+        <p class="muted cs-lede">Seven short-form ads for the same problem-aware reader, shown as they'd appear in the feed. Each one opens on a saved thing that never got opened, and closes on the install.</p>
       </div>
 
       <div class="ads">
@@ -1550,6 +1565,13 @@
           <div class="ph-cap" dir="rtl"><p class="hook">بتدور على لينك وسط 1000 لينك… هتلاقيه إزاي؟</p><p>كل مرة بتحتاج لينك حفظته قبل كده، بتضيع وقتك في البحث عنه، وفي الآخر ممكن تضطر تدور على نفس المعلومة من جديد.</p><p>تخيل بدل كل ده، تكتب كلمة وتلاقي اللينك اللي محتاجه بسهولة، من غير ما تسأل نفسك حفظته فين أو تبحث في كذا مكان.</p><p>مع تطبيق بعدين، تقدر تجمع كل لينكاتك في مكان واحد وتستخدم ميزة البحث عشان توصل لأي لينك حفظته.</p><p class="cta">احفظ براحتك، وسيب البحث على بعدين. حمّل بعدين من أول كومنت.</p></div>
           <div class="ph-btn"><span>Install</span><span class="arr" aria-hidden="true"></span></div>
           <p class="ph-note">Before → After → Bridge</p>
+        </article>
+        <article class="phone fourps">
+          <div class="ph-top"><span class="av">ب</span><div><b>بعدين · Baadein</b><span>Sponsored</span></div><span class="ph-f label">4Ps</span></div>
+          <div class="ph-media"><span dir="rtl">تخيل معايا لو بدأت تعمل الحاجات اللي أنت حافظها في الـ Saved!</span></div>
+          <div class="ph-cap" dir="rtl"><p class="hook">تخيل معايا لو بدأت تعمل الحاجات اللي أنت حافظها في الـ Saved!</p><p>كورس الإنجليزي اللي حفظته عشان تطور مستواك من A1 لـ B2، وتزود فرصك في شغل أحسن. ولا كورس الجرافيك ديزاين اللي حافظه من سنتين، وكان نفسك تتعلم منه مهارة تشتغل بيها فريلانسر وتقبض بالدولار. ولا حتى فيديوهات التمرين اللي حفظتها عشان توصل لفورمة الساحل.</p><p>تخيل لو بدل ما كل الحاجات دي تفضل محفوظة، بدأت ترجع لها وتعملها!</p><p>مهما كانت أهدافك في اللينكات اللي حافظها، أبلكيشن بعدين هيساعدك تنجزها في الوقت المناسب ليك: اعمل شير للي حابب ترجع له للأبلكيشن، واختار وقت التذكير، ودوس تذكير.</p><p>بدل ما أهدافك تفضل في الـ Saved، ابدأ بخطوة ناحيتها.</p><p class="cta">حمّل بعدين دلوقتي، وابدأ بأول لينك كنت مأجله.</p></div>
+          <div class="ph-btn"><span>Install</span><span class="arr" aria-hidden="true"></span></div>
+          <p class="ph-note">Picture → Promise → Prove → Push</p>
         </article>
         <article class="phone">
           <div class="ph-top"><span class="av">ب</span><div><b>بعدين · Baadein</b><span>Sponsored</span></div><span class="ph-f label">PAS</span></div>
