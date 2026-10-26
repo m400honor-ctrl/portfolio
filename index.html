@@ -640,6 +640,29 @@
   @keyframes rv-dot2 { 0%, 42% { background: var(--black-3); } 50%, 92% { background: var(--yellow); } 100% { background: var(--black-3); } }
   @media (prefers-reduced-motion: reduce) { .rv-track, .rv-dots i { animation: none; } .rv-track { width: 100%; flex-direction: column; } .rv-panel { width: 100%; } }
 
+  /* ad 05: wide long-form mockup with reviews design as media */
+  .cs-ad5 h2 .thin { font-weight: 600; opacity: .55; }
+  .phone.wide { grid-template-columns: 420px minmax(0, 1fr); grid-template-rows: auto 1fr auto; gap: 10px 18px; padding: 14px; }
+  @media (max-width: 900px) { .phone.wide { grid-template-columns: 1fr; } }
+  .phone.wide .ph-media.rvd { grid-column: 1; grid-row: 1 / span 3; aspect-ratio: auto; min-height: 0; background: var(--ink); border: 1px solid var(--black-3); display: grid; align-content: start; gap: 10px; padding: 14px; text-align: right; }
+  .rvd-head { display: flex; justify-content: space-between; align-items: center; }
+  .rvd-head .label { color: var(--yellow); font-size: 11px; }
+  .rvd-play { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; color: var(--yellow); font-size: 13px; }
+  .rvd-card { background: var(--cream); color: var(--ink); border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; position: relative; }
+  .rvd-card::before { content: ""; position: absolute; right: 0; top: 12px; bottom: 12px; width: 3px; background: var(--yellow); border-radius: 2px 0 0 2px; }
+  .rvd-who { display: flex; justify-content: space-between; align-items: center; }
+  .rvd-who b { font-size: 13.5px; font-weight: 800; }
+  .rvd-who .rv-stars svg { width: 14px; height: 14px; }
+  .rvd-card p { margin: 0; font-family: "Manrope", sans-serif; font-size: 13px; line-height: 1.6; font-weight: 600; color: var(--ink); }
+  .phone.wide .ph-top { grid-column: 2; grid-row: 1; }
+  .phone.wide .ph-cap.long { grid-column: 2; grid-row: 2; gap: 5px; }
+  .phone.wide .ph-cap.long p { font-size: 12.5px; line-height: 1.55; color: var(--white-soft); }
+  .phone.wide .ph-cap.long p b { color: var(--white); }
+  .phone.wide .ph-cap.long .hook { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; font-size: 15px; color: var(--white); line-height: 1.4; }
+  .phone.wide .ph-cap.long .proof-ref { color: var(--yellow); font-weight: 700; }
+  .phone.wide .ph-cap.long .cta { color: var(--white); font-weight: 800; font-size: 13.5px; }
+  .phone.wide .ph-btn { grid-column: 2; grid-row: 3; }
+
   /* 09-10 script: screenplay layout, scene | dialogue */
   .script { display: grid; gap: 8px; }
   .script .sh { display: grid; grid-template-columns: 40px minmax(0, .8fr) minmax(0, 1.5fr); gap: 0 18px; padding: 0 16px 4px; }
@@ -799,10 +822,11 @@
   <li><a href="#s14" aria-label="Case study 01 , Final script, cont."></a></li>
   <li><a href="#s15" aria-label="Case study 01 , Final script, end"></a></li>
   <li><a href="#s16" aria-label="Case study 01 , Ad and funnel copy"></a></li>
-  <li><a href="#s17" aria-label="Case study 01 , Results and reflection"></a></li>
-  <li><a href="#s18" aria-label="How we'd work"></a></li>
-  <li><a href="#s19" aria-label="Proof , Google Play reviews"></a></li>
-  <li><a href="#s20" aria-label="Let's talk"></a></li>
+  <li><a href="#s17" aria-label="Case study 01 , Ad and funnel copy , 05"></a></li>
+  <li><a href="#s18" aria-label="Case study 01 , Results and reflection"></a></li>
+  <li><a href="#s19" aria-label="How we'd work"></a></li>
+  <li><a href="#s20" aria-label="Proof , Google Play reviews"></a></li>
+  <li><a href="#s21" aria-label="Let's talk"></a></li>
 </ol>
 <button class="next" type="button" aria-label="Next slide">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -812,7 +836,7 @@
 
   <!-- ============ 01 COVER ============ -->
   <section class="slide dark cover" id="s1">
-    <div class="meta label"><span>Portfolio · 2026</span><span class="num"><b>01</b> / 20</span></div>
+    <div class="meta label"><span>Portfolio · 2026</span><span class="num"><b>01</b> / 21</span></div>
     <div class="frame">
       <div class="text">
         <!-- My process, compact: Research → Direction → Copy -->
@@ -856,7 +880,7 @@
 
   <!-- ============ TOC ============ -->
   <section class="slide cream cs toc" id="s2">
-    <div class="meta label"><span>Contents</span><span class="num"><b>02</b> / 20</span></div>
+    <div class="meta label"><span>Contents</span><span class="num"><b>02</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head row">
         <div>
@@ -871,8 +895,8 @@
           <li><a href="#s4"><span class="tn">02</span><span class="tt">Who I help and how</span></a></li>
           <li><a href="#s5"><span class="tn">03</span><span class="tt">What I write</span></a></li>
           <li><a href="#s6"><span class="tn">04</span><span class="tt">Selected work</span></a></li>
-          <li><a href="#s18"><span class="tn">05</span><span class="tt">How we'd work</span></a></li>
-          <li><a href="#s20"><span class="tn">07</span><span class="tt">Let's talk</span></a></li>
+          <li><a href="#s19"><span class="tn">05</span><span class="tt">How we'd work</span></a></li>
+          <li><a href="#s21"><span class="tn">07</span><span class="tt">Let's talk</span></a></li>
         </ol>
         <div class="toc-case">
           <span class="label">Case study 01 · Baadein <span class="ar" dir="rtl">بعدين</span></span>
@@ -884,7 +908,7 @@
             <li><a href="#s12"><span class="tn">e</span><span class="tt">Creative direction</span></a></li>
             <li><a href="#s13"><span class="tn">f</span><span class="tt">Final script</span></a></li>
             <li><a href="#s16"><span class="tn">g</span><span class="tt">Ad &amp; funnel copy</span></a></li>
-            <li><a href="#s17"><span class="tn">h</span><span class="tt">Results &amp; reflection</span></a></li>
+            <li><a href="#s18"><span class="tn">h</span><span class="tt">Results &amp; reflection</span></a></li>
           </ol>
         </div>
       </div>
@@ -893,7 +917,7 @@
 
   <!-- ============ ABOUT ============ -->
   <section class="slide dark cs cs-about" id="s3">
-    <div class="meta label"><span>About me</span><span class="num"><b>03</b> / 20</span></div>
+    <div class="meta label"><span>About me</span><span class="num"><b>03</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head row">
         <div>
@@ -920,7 +944,7 @@
 
   <!-- ============ 02 WHO I HELP ============ -->
   <section class="slide yellow help" id="s4">
-    <div class="meta label"><span>Who I help and how</span><span class="num"><b>04</b> / 20</span></div>
+    <div class="meta label"><span>Who I help and how</span><span class="num"><b>04</b> / 21</span></div>
     <div class="frame">
       <h2>Who I help and how</h2>
 
@@ -983,7 +1007,7 @@
 
   <!-- ============ 03 WHAT I WRITE ============ -->
   <section class="slide cream write" id="s5">
-    <div class="meta label"><span>What I write</span><span class="num"><b>05</b> / 20</span></div>
+    <div class="meta label"><span>What I write</span><span class="num"><b>05</b> / 21</span></div>
     <div class="frame">
 
       <!-- row 1: title + funnel stages -->
@@ -1052,7 +1076,7 @@
 
   <!-- ============ 04 THE WORK: INDEX ============ -->
   <section class="slide cream work" id="s6">
-    <div class="meta label"><span>Selected work</span><span class="num"><b>06</b> / 20</span></div>
+    <div class="meta label"><span>Selected work</span><span class="num"><b>06</b> / 21</span></div>
     <div class="frame">
       <div class="work-head">
         <h2>The work, <span class="thin">brief first.</span></h2>
@@ -1086,7 +1110,7 @@
 
   <!-- ============ 05 CASE STUDY: BAADEIN ============ -->
   <section class="slide dark cs cs-intro" id="s7">
-    <div class="meta label"><span>Case study 01 · Baadein <span class="ar" dir="rtl">بعدين</span></span><span class="num"><b>07</b> / 20</span></div>
+    <div class="meta label"><span>Case study 01 · Baadein <span class="ar" dir="rtl">بعدين</span></span><span class="num"><b>07</b> / 21</span></div>
     <div class="frame">
       <div class="cs-hero">
         <div>
@@ -1125,7 +1149,7 @@
 
   <!-- ============ BRAND PERSONALITY ============ -->
   <section class="slide cream cs cs-voice" id="s8">
-    <div class="meta label"><span>Case study 01 · Brand personality</span><span class="num"><b>08</b> / 20</span></div>
+    <div class="meta label"><span>Case study 01 · Brand personality</span><span class="num"><b>08</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head row">
         <div>
@@ -1197,7 +1221,7 @@
 
   <!-- ============ 06 PERSONA + EVIDENCE ============ -->
   <section class="slide cream cs cs-persona" id="s9">
-    <div class="meta label"><span>Case study 01 · Persona &amp; evidence</span><span class="num"><b>09</b> / 20</span></div>
+    <div class="meta label"><span>Case study 01 · Persona &amp; evidence</span><span class="num"><b>09</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head">
         <p class="label eyebrow">Persona &amp; evidence</p>
@@ -1236,7 +1260,7 @@
 
   <!-- ============ 07 INSIGHT → ANGLE → MESSAGE ============ -->
   <section class="slide dark cs cs-think" id="s10">
-    <div class="meta label"><span>Case study 01 · Insight → Angle → Message</span><span class="num"><b>10</b> / 20</span></div>
+    <div class="meta label"><span>Case study 01 · Insight → Angle → Message</span><span class="num"><b>10</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head">
         <p class="label eyebrow">The thinking</p>
@@ -1264,7 +1288,7 @@
 
   <!-- ============ 08 COPY DIRECTION ============ -->
   <section class="slide cream cs cs-dir" id="s11">
-    <div class="meta label"><span>Case study 01 · Copy direction</span><span class="num"><b>11</b> / 20</span></div>
+    <div class="meta label"><span>Case study 01 · Copy direction</span><span class="num"><b>11</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head">
         <p class="label eyebrow">Copy direction</p>
@@ -1286,7 +1310,7 @@
 
   <!-- ============ 09 CREATIVE DIRECTION ============ -->
   <section class="slide dark cs cs-creative" id="s12">
-    <div class="meta label"><span>Case study 01 · Creative direction</span><span class="num"><b>12</b> / 20</span></div>
+    <div class="meta label"><span>Case study 01 · Creative direction</span><span class="num"><b>12</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head row">
         <div>
@@ -1313,7 +1337,7 @@
 
   <!-- ============ 10 FINAL SCRIPT ============ -->
   <section class="slide dark cs cs-script" id="s13">
-    <div class="meta label"><span>Case study 01 · Final script</span><span class="num"><b>13</b> / 20</span></div>
+    <div class="meta label"><span>Case study 01 · Final script</span><span class="num"><b>13</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head row">
         <div>
@@ -1336,7 +1360,7 @@
 
   <!-- ============ 11 FINAL SCRIPT ============ -->
   <section class="slide dark cs cs-script" id="s14">
-    <div class="meta label"><span>Case study 01 · Final script, cont.</span><span class="num"><b>14</b> / 20</span></div>
+    <div class="meta label"><span>Case study 01 · Final script, cont.</span><span class="num"><b>14</b> / 21</span></div>
     <div class="frame">
       <div class="script" dir="rtl">
         <div class="sh"><span></span><span>المشهد</span><span>الصوت</span></div>
@@ -1352,7 +1376,7 @@
 
   <!-- ============ 12 FINAL SCRIPT ============ -->
   <section class="slide dark cs cs-script" id="s15">
-    <div class="meta label"><span>Case study 01 · Final script, end</span><span class="num"><b>15</b> / 20</span></div>
+    <div class="meta label"><span>Case study 01 · Final script, end</span><span class="num"><b>15</b> / 21</span></div>
     <div class="frame">
       <div class="script" dir="rtl">
         <div class="sh"><span></span><span>المشهد</span><span>الصوت</span></div>
@@ -1375,14 +1399,14 @@
 
   <!-- ============ 13 ADS ============ -->
   <section class="slide cream cs cs-ads" id="s16">
-    <div class="meta label"><span>Case study 01 · Ad &amp; funnel copy</span><span class="num"><b>16</b> / 20</span></div>
+    <div class="meta label"><span>Case study 01 · Ad &amp; funnel copy</span><span class="num"><b>16</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head row">
         <div>
           <p class="label eyebrow">Second deliverable · Ad &amp; funnel copy</p>
-          <h2 class="ruled">Same insight, <span class="thin">four ways in.</span></h2>
+          <h2 class="ruled">Same insight, <span class="thin">five ways in.</span></h2>
         </div>
-        <p class="muted cs-lede">Four short-form ads for the same problem-aware reader, shown as they'd appear in the feed. Each one opens on a saved thing that never got opened, and closes on the install.</p>
+        <p class="muted cs-lede">Four short-form ads for the same problem-aware reader, shown as they'd appear in the feed. Each one opens on a saved thing that never got opened, and closes on the install. The fifth, long-form and proof-led, is on the next slide.</p>
       </div>
 
       <div class="ads">
@@ -1427,9 +1451,51 @@
     </div>
   </section>
 
+  <!-- ============ AD 05 LONG-FORM ============ -->
+  <section class="slide cream cs cs-ad5" id="s17">
+    <div class="meta label"><span>Case study 01 · Ad &amp; funnel copy · 05</span><span class="num"><b>17</b> / 21</span></div>
+    <div class="frame">
+      <div class="cs-head row">
+        <div>
+          <p class="label eyebrow">Ad 05 · Long-form, proof-led</p>
+          <h2 class="ruled">The fifth way in: <span class="thin">let users say it.</span></h2>
+        </div>
+        <p class="muted cs-lede">Same structure as a long-form performance ad: hook, agitation, the problem with the tools, the fix, before and after, proof, risk removal, one action. The proof is two real Google Play reviews, quoted as written.</p>
+      </div>
+
+      <article class="phone wide">
+        <div class="ph-top"><span class="av">ب</span><div><b>بعدين · Baadein</b><span>Sponsored</span></div><span class="ph-f label">Long-form · Proof-led</span></div>
+
+        <div class="ph-media rvd" dir="rtl">
+          <div class="rvd-head"><span class="label">من Google Play · بالحرف</span><span class="rvd-play" dir="ltr">★ 5.0</span></div>
+          <div class="rvd-card">
+            <div class="rvd-who"><b>عبد الرحمن</b><span class="rv-stars"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.7 5.9 21l1.3-6.8-5-4.7 6.8-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.7 5.9 21l1.3-6.8-5-4.7 6.8-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.7 5.9 21l1.3-6.8-5-4.7 6.8-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.7 5.9 21l1.3-6.8-5-4.7 6.8-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.7 5.9 21l1.3-6.8-5-4.7 6.8-.8z"/></svg></span></div>
+            <p>البرنامج مفيد بالنسبالي، بيفكرني بكل لينك، وكمان فيه ديسكربشن عشان أفتكر اللينك ده بتاع إيه، بدل ما أقعد أحفظ في الشات وخلاص.</p>
+          </div>
+          <div class="rvd-card">
+            <div class="rvd-who"><b>آية</b><span class="rv-stars"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.7 5.9 21l1.3-6.8-5-4.7 6.8-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.7 5.9 21l1.3-6.8-5-4.7 6.8-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.7 5.9 21l1.3-6.8-5-4.7 6.8-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.7 5.9 21l1.3-6.8-5-4.7 6.8-.8z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.7 5.9 21l1.3-6.8-5-4.7 6.8-.8z"/></svg></span></div>
+            <p>لو الواحد في دماغه دوشة كتير ومقاطع كتير عايز يتفرج عليها ومش عارف يرتبها أو هينساها، فبجد التطبيق ده تُحفة.</p>
+          </div>
+        </div>
+
+        <div class="ph-cap long" dir="rtl">
+          <p class="hook">أنا ممكن أدفع فلوس، ولا إني أحفظ لينكاتي في السوشيال تاني.</p>
+          <p>عاملين لك زرار حفظ فوق كل بوست. بس لما تيجي ترجع للينك: شوف البوست ده الأول، وشوف المسج دي كمان، وفجأة تلاقي نفسك ناسي إنت فاتح ليه أصلًا.</p>
+          <p>معظم الأماكن اللي بنحفظ فيها مش معمولة للرجوع. معمولة إنك تفضل جواها. فبتاخد وقت عشان تلاقي اللي حفظته، ونادرًا لما ترجع له.</p>
+          <p>عشان كده أنا بستخدم بعدين. بشير اللينك له من أي أبلكيشن، بختار الوقت اللي عايز أرجع فيه، والموبايل بيرن في الوقت ده حتى لو مقفول. وكل اللينكات متجمعة وبقدر أدور فيها بكلمة.</p>
+          <p><b>قبل:</b> كورس حفظته من 5 شهور لسه واقف عند أول فيديو. <b>بعد:</b> التذكير رن الساعة 9، فتحت، وذاكرت.</p>
+          <p class="proof-ref">والناس اللي جربته قالت ده بنفسها ← الريفيوهات على اليمين.</p>
+          <p>مجاني، من غير حساب، وبيشتغل من غير نت. مفيش حاجة تخسرها غير اللينكات اللي كنت هتنساها.</p>
+          <p class="cta">حمّل بعدين، وظبّط أول تذكير.</p>
+        </div>
+        <div class="ph-btn"><span>Install</span><span class="arr" aria-hidden="true"></span></div>
+      </article>
+    </div>
+  </section>
+
   <!-- ============ RESULTS ============ -->
-  <section class="slide dark cs cs-results" id="s17">
-    <div class="meta label"><span>Case study 01 · Results &amp; reflection</span><span class="num"><b>17</b> / 20</span></div>
+  <section class="slide dark cs cs-results" id="s18">
+    <div class="meta label"><span>Case study 01 · Results &amp; reflection</span><span class="num"><b>18</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head row">
         <div>
@@ -1471,8 +1537,8 @@
   </section>
 
   <!-- ============ HOW WE WORK ============ -->
-  <section class="slide cream cs cs-how" id="s18">
-    <div class="meta label"><span>How we'd work</span><span class="num"><b>18</b> / 20</span></div>
+  <section class="slide cream cs cs-how" id="s19">
+    <div class="meta label"><span>How we'd work</span><span class="num"><b>19</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head row">
         <div>
@@ -1492,8 +1558,8 @@
   </section>
 
   <!-- ============ REVIEWS ============ -->
-  <section class="slide dark cs cs-reviews" id="s19">
-    <div class="meta label"><span>Proof · Google Play reviews</span><span class="num"><b>19</b> / 20</span></div>
+  <section class="slide dark cs cs-reviews" id="s20">
+    <div class="meta label"><span>Proof · Google Play reviews</span><span class="num"><b>20</b> / 21</span></div>
     <div class="frame">
       <div class="cs-head row">
         <div>
@@ -1526,8 +1592,8 @@
   </section>
 
   <!-- ============ 14 CONTACT ============ -->
-  <section class="slide yellow contact" id="s20">
-    <div class="meta label"><span>Let's talk</span><span class="num"><b>20</b> / 20</span></div>
+  <section class="slide yellow contact" id="s21">
+    <div class="meta label"><span>Let's talk</span><span class="num"><b>21</b> / 21</span></div>
     <div class="frame">
       <div>
         <h2>This story ends here. <span class="soft">The next one could be yours.</span></h2>
